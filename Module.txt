@@ -1,0 +1,7 @@
+﻿Name: Twitter Follow Button Widget
+AntiForgery: enabled
+Author: Nicholas Mayne
+Website: https://github.com/Jetski5822/Twitter-Follow-Button
+Version: 0.0.1
+OrchardVersion: 1.2.41
+Description: Provides Twitter follow button widget and part (http://twitter.com/about/resources/followbutton)

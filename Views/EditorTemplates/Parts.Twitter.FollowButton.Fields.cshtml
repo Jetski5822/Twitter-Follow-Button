@@ -1,0 +1,25 @@
+﻿@model NGM.TwitterFollowButton.Models.TwitterFollowPart
+<fieldset>
+    <legend>Twitter Follow Button settings</legend>
+    <span class="hint"><a href="http://twitter.com/about/resources/followbutton">@T("Visit the twitter ui interaction to see the preview.")</a></span>
+    <div>
+        <label for="@Html.FieldIdFor(m => m.Username)">@T("User name")</label>
+        @Html.EditorFor(m => m.Username)
+    </div>
+    <div>
+        @Html.EditorFor(m => m.ShowFollowerCount)
+        <label for="@Html.FieldIdFor(m => m.ShowFollowerCount)" class="forcheckbox">@T("Show Follower Count")</label>
+    </div>
+    <div>
+        <label for="@Html.FieldIdFor(m => m.Colour)">@T("Colour")</label>
+        @Html.DropDownList("Colour", Enum.GetNames(typeof(NGM.TwitterFollowButton.Models.Colour)).Select(o => new SelectListItem { Text = o, Value = o }))
+    </div>
+    <div>
+        <label for="@Html.FieldIdFor(m => m.Align)">@T("Align")</label>
+        @Html.DropDownList("Align", Enum.GetNames(typeof(NGM.TwitterFollowButton.Models.Align)).Select(o => new SelectListItem { Text = o, Value = o }))
+    </div>
+    <div>
+        <label for="@Html.FieldIdFor(m => m.Width)">@T("Width in px")</label>
+        <span>@Html.EditorFor(m => m.Width) px</span>
+    </div>
+</fieldset>

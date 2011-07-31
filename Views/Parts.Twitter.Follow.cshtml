@@ -1,0 +1,9 @@
+﻿@using NGM.TwitterFollowButton.Extensions
+@using NGM.TwitterFollowButton.Models
+
+@{
+    Script.Require("TwitterFollow").AtFoot();
+    var contentPart = (TwitterFollowPart)Model.ContentPart;
+}
+
+@Html.BuildTwitterScriptFor(contentPart)
