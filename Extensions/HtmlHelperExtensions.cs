@@ -22,7 +22,7 @@ namespace NGM.TwitterFollowButton.Extensions {
             if (part.BackgroundColour == Colour.Dark.ToString())
                 builder.Append(" data-text-color=\"#FFFFFF\" data-link-color=\"#00AEFF\"");
 
-            if (!string.IsNullOrEmpty(part.Language) && string.IsNullOrEmpty(GetTwoLanguageCharacter(part.Language)))
+            if (!string.IsNullOrEmpty(part.Language) && !string.IsNullOrEmpty(GetTwoLanguageCharacter(part.Language)))
                 builder.AppendFormat(" data-lang=\"{0}\"", GetTwoLanguageCharacter(part.Language));
 
             if (part.Width != 300)
