@@ -1,4 +1,5 @@
-﻿using Orchard.ContentManagement;
+﻿using System;
+using Orchard.ContentManagement;
 
 namespace NGM.TwitterFollowButton.Models {
     public class TwitterFollowPart : ContentPart<TwitterFollowPartRecord> {
@@ -25,6 +26,11 @@ namespace NGM.TwitterFollowButton.Models {
         public string Align {
             get { return Record.Align; }
             set { Record.Align = value; }
+        }
+
+        public string Language {
+            get { return Record.Language; }
+            set { Record.Language = value; }
         }
     }
 }

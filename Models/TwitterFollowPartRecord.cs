@@ -7,5 +7,6 @@ namespace NGM.TwitterFollowButton.Models {
         public virtual string BackgroundColour { get; set; }
         public virtual int Width { get; set; }
         public virtual string Align { get; set; }
+        public virtual string Language { get; set; }
     }
 }

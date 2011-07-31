@@ -22,4 +22,8 @@
         <label for="@Html.FieldIdFor(m => m.Width)">@T("Width in px")</label>
         <span>@Html.EditorFor(m => m.Width) px</span>
     </div>
+    <div>
+        <label for="@Html.FieldIdFor(m => m.Language)">@T("Language")</label>
+        @Html.DropDownList("Language", Enum.GetNames(typeof(NGM.TwitterFollowButton.Models.Language)).Select(o => new SelectListItem { Text = o, Value = o }))
+    </div>
 </fieldset>

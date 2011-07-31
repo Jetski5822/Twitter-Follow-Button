@@ -14,6 +14,7 @@ namespace NGM.TwitterFollowButton {
                                                    .Column<string>("BackgroundColour")
                                                    .Column<int>("Width")
                                                    .Column<string>("Align")
+                                                   .Column<string>("Language")
                 );
 
             ContentDefinitionManager.AlterPartDefinition(typeof(TwitterFollowPart).Name, cfg => cfg.Attachable());
