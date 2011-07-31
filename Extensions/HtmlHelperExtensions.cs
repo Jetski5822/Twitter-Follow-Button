@@ -13,7 +13,7 @@ namespace NGM.TwitterFollowButton.Extensions {
             var builder = new StringBuilder();
             builder.Append(startTag);
 
-            builder.AppendFormat(" href=\"http://twitter.com/{0}\"", part.Username);
+            builder.AppendFormat(" href=\"http://twitter.com/{0}\"", part.Username.TrimStart('@'));
             builder.Append(" class=\"twitter-follow-button\"");
 
             if (!part.ShowFollowerCount)
@@ -31,7 +31,7 @@ namespace NGM.TwitterFollowButton.Extensions {
             if (part.Align != Align.Left.ToString())
                 builder.AppendFormat(" data-width=\"{0}\"px", part.Width);
 
-            builder.AppendFormat(endTag, part.Username);
+            builder.AppendFormat(endTag, part.Username.TrimStart('@'));
 
             return MvcHtmlString.Create(builder.ToString());
         }

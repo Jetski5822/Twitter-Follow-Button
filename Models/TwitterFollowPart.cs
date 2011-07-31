@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using Orchard.ContentManagement;
 
 namespace NGM.TwitterFollowButton.Models {
@@ -18,6 +19,7 @@ namespace NGM.TwitterFollowButton.Models {
             set { Record.BackgroundColour = value; }
         }
 
+        [DefaultValue(300)]
         public int Width {
             get { return Record.Width; }
             set { Record.Width = value; }

@@ -11,8 +11,8 @@
         <label for="@Html.FieldIdFor(m => m.ShowFollowerCount)" class="forcheckbox">@T("Show Follower Count")</label>
     </div>
     <div>
-        <label for="@Html.FieldIdFor(m => m.Colour)">@T("Colour")</label>
-        @Html.DropDownList("Colour", Enum.GetNames(typeof(NGM.TwitterFollowButton.Models.Colour)).Select(o => new SelectListItem { Text = o, Value = o }))
+        <label for="@Html.FieldIdFor(m => m.BackgroundColour)">@T("Colour")</label>
+        @Html.DropDownList("BackgroundColour", Enum.GetNames(typeof(NGM.TwitterFollowButton.Models.Colour)).Select(o => new SelectListItem { Text = o, Value = o }))
     </div>
     <div>
         <label for="@Html.FieldIdFor(m => m.Align)">@T("Align")</label>

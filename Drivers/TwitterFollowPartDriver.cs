@@ -9,6 +9,9 @@ namespace NGM.TwitterFollowButton.Drivers {
         }
 
         protected override DriverResult Editor(TwitterFollowPart part, dynamic shapeHelper) {
+            if (part.Width == 0)
+                part.Width = 300;
+
             return ContentShape("Parts_Twitter_FollowButton_Fields",
                                 () => shapeHelper.EditorTemplate(TemplateName: "Parts.Twitter.FollowButton.Fields", Model: part, Prefix: Prefix));
         }
